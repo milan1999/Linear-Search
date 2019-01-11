@@ -2,7 +2,7 @@
 
 int main()
 {
-	int arr[100], i, num, n, c=0, pos;
+	int arr[100], i, num, n, pos=-1;
 	printf("Enter the array size : ");
 	scanf("%d", &n);
 	printf("Enter the Array Elements : ");
@@ -16,12 +16,11 @@ int main()
 	{
 		if(arr[i]==num)
 		{
-			c=1;
 			pos=i+1;
 			break;
 		}
 	}
-	if(c==0)
+	if(pos==-1)
 	{
 		printf("Number cannot be found..!!");
 	}
@@ -29,6 +28,5 @@ int main()
 	{
 		printf("%d found at the position %d", num, pos);
 	}
-	
 	return 0;
 }
